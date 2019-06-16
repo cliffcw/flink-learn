@@ -10,6 +10,13 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
  * @create: 2019-06-13 21:20
  */
 public class SourceFromMysql {
+    /**
+     * @Description: 从mysql读取数据输出
+     * @Param:
+     * @return:
+     * @Author: cliffcw
+     * @Date:
+     */
     public static void main(String[] args) throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
