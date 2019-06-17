@@ -1,5 +1,6 @@
-package com.chenwan.flink.source;
+package com.chenwan.flink.function;
 
+import com.chenwan.flink.pojo.entity.User;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.source.RichSourceFunction;
 
@@ -14,7 +15,7 @@ import java.sql.ResultSet;
  * @author: cliffcw
  * @create: 2019-06-13 21:10
  */
-public class SourceFromMySQLFunction extends RichSourceFunction<User> {
+public class SourceFromMySqLFunction extends RichSourceFunction<User> {
     PreparedStatement ps;
     private Connection connection;
 

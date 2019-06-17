@@ -1,7 +1,7 @@
 package com.chenwan.flink.TransFormation;
 
-import com.chenwan.flink.source.SourceFromMySQLFunction;
-import com.chenwan.flink.source.User;
+import com.chenwan.flink.function.SourceFromMySqLFunction;
+import com.chenwan.flink.pojo.entity.User;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
@@ -24,7 +24,7 @@ public class Map {
     public static void main(String[] args) throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
-        DataStreamSource<User> user = env.addSource(new SourceFromMySQLFunction());
+        DataStreamSource<User> user = env.addSource(new SourceFromMySqLFunction());
 
         SingleOutputStreamOperator<User> map = user.map(new MapFunction<User, User>() {
             //将每个user的name加上"cliffcw"

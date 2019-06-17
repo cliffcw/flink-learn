@@ -1,6 +1,4 @@
-package com.chenwan.flink.source;
-
-import java.math.BigDecimal;
+package com.chenwan.flink.pojo.entity;
 
 /**
  * @program: flink-learn

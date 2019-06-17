@@ -1,4 +1,4 @@
-package com.chenwan.flink.job;
+package com.chenwan.flink.source;
 
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;

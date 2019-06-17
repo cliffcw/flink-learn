@@ -1,7 +1,7 @@
 package com.chenwan.flink.TransFormation;
 
-import com.chenwan.flink.source.SourceFromMySQLFunction;
-import com.chenwan.flink.source.User;
+import com.chenwan.flink.function.SourceFromMySqLFunction;
+import com.chenwan.flink.pojo.entity.User;
 import org.apache.flink.api.common.functions.ReduceFunction;
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
@@ -25,7 +25,7 @@ public class Reduce {
     public static void main(String[] args) throws Exception {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        DataStreamSource<User> userDataStreamSource = env.addSource(new SourceFromMySQLFunction());
+        DataStreamSource<User> userDataStreamSource = env.addSource(new SourceFromMySqLFunction());
 
         SingleOutputStreamOperator<User> reduce = userDataStreamSource.keyBy(new KeySelector<User, Long>() {
             @Override

@@ -1,4 +1,4 @@
-package com.chenwan.flink.job;
+package com.chenwan.flink.example;
 
 
 import org.apache.flink.api.common.functions.FlatMapFunction;

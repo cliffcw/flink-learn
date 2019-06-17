@@ -1,6 +1,7 @@
-package com.chenwan.flink.source;
+package com.chenwan.flink.utils;
 
 import com.alibaba.fastjson.JSON;
+import com.chenwan.flink.pojo.dto.Metric;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 

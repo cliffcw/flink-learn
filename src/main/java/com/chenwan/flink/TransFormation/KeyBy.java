@@ -1,8 +1,7 @@
 package com.chenwan.flink.TransFormation;
 
-import com.chenwan.flink.source.SourceFromMySQLFunction;
-import com.chenwan.flink.source.User;
-import org.apache.flink.api.common.JobExecutionResult;
+import com.chenwan.flink.function.SourceFromMySqLFunction;
+import com.chenwan.flink.pojo.entity.User;
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.KeyedStream;
@@ -26,7 +25,7 @@ public class KeyBy {
 
         StreamExecutionEnvironment evn = StreamExecutionEnvironment.getExecutionEnvironment();
 
-        DataStreamSource<User> userDataStreamSource = evn.addSource(new SourceFromMySQLFunction());
+        DataStreamSource<User> userDataStreamSource = evn.addSource(new SourceFromMySqLFunction());
 
         KeyedStream<User, Long> keyBy = userDataStreamSource.keyBy(new KeySelector<User, Long>() {
             //对age做keyBy分区操作

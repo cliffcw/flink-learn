@@ -1,6 +1,6 @@
-package com.chenwan.flink.job;
+package com.chenwan.flink.source;
 
-import com.chenwan.flink.source.SourceFromMySQLFunction;
+import com.chenwan.flink.function.SourceFromMySqLFunction;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
 /**
@@ -20,7 +20,7 @@ public class SourceFromMysql {
     public static void main(String[] args) throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
-        env.addSource(new SourceFromMySQLFunction()).print();
+        env.addSource(new SourceFromMySqLFunction()).print();
 
         env.execute("Flink add data sourc");
     }

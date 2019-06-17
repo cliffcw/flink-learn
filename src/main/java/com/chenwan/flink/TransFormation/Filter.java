@@ -1,7 +1,7 @@
 package com.chenwan.flink.TransFormation;
 
-import com.chenwan.flink.source.SourceFromMySQLFunction;
-import com.chenwan.flink.source.User;
+import com.chenwan.flink.function.SourceFromMySqLFunction;
+import com.chenwan.flink.pojo.entity.User;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
@@ -25,7 +25,7 @@ public class Filter {
     public static void main(String[] args) throws Exception {
 
         StreamExecutionEnvironment evn = StreamExecutionEnvironment.getExecutionEnvironment();
-        DataStreamSource<User> userSource = evn.addSource(new SourceFromMySQLFunction());
+        DataStreamSource<User> userSource = evn.addSource(new SourceFromMySqLFunction());
 
         SingleOutputStreamOperator<User> filter = userSource.filter(new FilterFunction<User>() {
             //判断出id大于5的数据

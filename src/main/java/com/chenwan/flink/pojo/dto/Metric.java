@@ -1,4 +1,4 @@
-package com.chenwan.flink.source;
+package com.chenwan.flink.pojo.dto;
 
 import java.util.Map;
 
