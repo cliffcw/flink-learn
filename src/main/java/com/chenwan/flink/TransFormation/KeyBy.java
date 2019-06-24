@@ -15,7 +15,8 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
  */
 public class KeyBy {
 
-    /** * @Description:  在逻辑上是基于key对流进行分区。在内部，使用hash函数对流进行分区。它返回KeyedDataStream数据流
+    /**
+     * @Description: 在逻辑上是基于key对流进行分区。在内部，使用hash函数对流进行分区。它返回KeyedDataStream数据流
      * @Param:
      * @return:
      * @Author: cliffcw

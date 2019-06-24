@@ -78,7 +78,7 @@ public class SourceFromMySqLFunction extends RichSourceFunction<User> {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://121.40.43.10:3306/dbtest1?useUnicode=true&characterEncoding=UTF-8", "edaijia", "XpMfGYWFbAvaYQyb");
         } catch (Exception e) {
-            System.out.println("-----------mysql get connection has exception , msg = "+ e.getMessage());
+            System.out.println("-----------mysql get connection has exception , msg = " + e.getMessage());
         }
         return con;
     }

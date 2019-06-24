@@ -16,7 +16,8 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
  */
 public class Reduce {
 
-    /** * @Description: Reduce 返回单个的结果值，并且 reduce 操作每处理一个元素总是创建一个新值。常用的方法有 average, sum, min, max, count，使用 reduce 方法都可实现。
+    /**
+     * @Description: Reduce 返回单个的结果值，并且 reduce 操作每处理一个元素总是创建一个新值。常用的方法有 average, sum, min, max, count，使用 reduce 方法都可实现。
      * @Param:
      * @return:
      * @Author: cliffcw

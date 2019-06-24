@@ -41,7 +41,7 @@ public class WordCount {
                 .reduce(new ReduceFunction<Tuple2<String, Integer>>() {
                     @Override
                     public Tuple2<String, Integer> reduce(Tuple2<String, Integer> value1, Tuple2<String, Integer> value2) throws Exception {
-                        System.out.println(value1+":"+value2);
+                        System.out.println(value1 + ":" + value2);
                         /**
                          * 例如
                          * (a,1):(a,1)

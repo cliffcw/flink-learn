@@ -15,7 +15,8 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
  */
 public class Map {
 
-    /** * @Description:  map输入一个数据流，输出也是一个数据流
+    /**
+     * @Description: map输入一个数据流，输出也是一个数据流
      * @Param:
      * @return:
      * @Author: cliffcw
@@ -32,7 +33,7 @@ public class Map {
             public User map(User value) throws Exception {
                 User user = new User();
                 user.id = value.id;
-                user.name = value.name+"cliffcw";
+                user.name = value.name + "cliffcw";
                 user.password = value.password;
                 user.age = value.age;
 

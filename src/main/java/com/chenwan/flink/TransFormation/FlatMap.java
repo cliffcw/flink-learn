@@ -16,7 +16,8 @@ import org.apache.flink.util.Collector;
  */
 public class FlatMap {
 
-    /** * @Description:  flatMap 采用一条记录并输出零个，一个或多个
+    /**
+     * @Description: flatMap 采用一条记录并输出零个，一个或多个
      * @Param:
      * @return:
      * @Author: cliffcw
